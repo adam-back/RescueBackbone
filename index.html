@@ -4,39 +4,12 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
+    <script src="data/data.js"></script>
     <script src="models/EquipModel.js"></script>
     <script src="collections/EquipCache.js"></script>
     <script src="views/EquipView.js"></script>
     <script>
-    // set up model objects
-      var searcher = new Equipment({ resource: 'foot',
-        type: "I",
-        allocated: 50
-      });
-
-      var horse = new Equipment({ resource: 'horse',
-        type: "II",
-        allocated: 2
-      });
-      
-      var helicopter = new Equipment({ resource: 'helicopter',
-        type: "I",
-        allocated: 1
-      });
-      
-      var k9 = new Equipment({
-        resource: 'K9',
-        type: "II",
-        allocated: 3
-      });
-
-      var overhead = new Equipment({ resource: 'overhead staff',
-        type: "IV",
-        allocated: 10
-      })''
-
-      var cache = new Collection([searcher, horse, helicopter, k9, overhead], {model: Equipment);
-      
+      var cache = new Collection(tools, {model: Equipment);
       var equipmentView = new EquipView({collection: cache});
 
       $('body').append(equipmentView.render());
