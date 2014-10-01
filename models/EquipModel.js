@@ -1,1 +1,5 @@
-EquipModel.js
+var Equipment = Backbone.Model.extend({
+	initialize: function() {
+
+	}
+});
