@@ -1,0 +1,1 @@
+EquipModel.js
