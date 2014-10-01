@@ -9,8 +9,8 @@
     <script src="collections/EquipCache.js"></script>
     <script src="views/EquipView.js"></script>
     <script>
-      var cache = new Collection(tools, {model: Equipment);
-      var equipmentView = new EquipView({collection: cache});
+      var cache = new Backbone.Collection(tools, {model: Equipment});
+      var equipmentView = new EquipmentView({collection: cache});
 
       $('body').append(equipmentView.render());
     </script>
