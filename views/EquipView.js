@@ -9,7 +9,7 @@ var EquipmentView = Backbone.View.extend({
 	render: function() {
 		return this.$el.html(
       this.collection.map(function(tool) {
-        return tool;
+        return tool.render();
       })
     );
   }    
