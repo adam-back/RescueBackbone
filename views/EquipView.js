@@ -6,6 +6,13 @@ var EquipmentView = Backbone.View.extend({
     this.render();
 	},
 
+  events: {
+    'click': function() {
+      debugger;
+      this.cache.highlight();
+    }
+  },
+
 	render: function() {
 		return this.$el.html(
       this.collection.map(function(tool) {

@@ -6,6 +6,10 @@ var Equipment = Backbone.Model.extend({
 	 this.render();
   },
 
+  highlight: function() {
+    this.trigger('highlight', this);
+  },
+
   render: function() {
     return this.template(this.attributes);
   }
