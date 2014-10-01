@@ -1,11 +1,13 @@
 var EquipmentView = Backbone.View.extend({
-	// tag name left as div
+
+  tagName: 'table',
 
 	initialize: function() {
-
+    this.render();
 	},
 
 	render: function() {
-		
-	}
+		this.$el.html(this.collection.attributes);
+    return this;  
+  }    
 });
