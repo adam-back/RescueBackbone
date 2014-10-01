@@ -7,7 +7,10 @@ var EquipmentView = Backbone.View.extend({
 	},
 
 	render: function() {
-		this.$el.html(this.collection.attributes);
-    return this;  
+		return this.$el.html(
+      this.collection.map(function(tool) {
+        return tool;
+      })
+    );
   }    
 });
