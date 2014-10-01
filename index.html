@@ -9,29 +9,36 @@
     <script src="views/EquipView.js"></script>
     <script>
     // set up model objects
-      var tools = [
-      { resource: 'foot',
+      var searcher = new Equipment({ resource: 'foot',
         type: "I",
         allocated: 50
-      },
-      { resource: 'horse',
+      });
+
+      var horse = new Equipment({ resource: 'horse',
         type: "II",
         allocated: 2
-      },
-      { resource: 'helicopter',
+      });
+      
+      var helicopter = new Equipment({ resource: 'helicopter',
         type: "I",
         allocated: 1
-      },
-      { resource: 'K9',
+      });
+      
+      var k9 = new Equipment({
+        resource: 'K9',
         type: "II",
         allocated: 3
-      },
-      { resource: 'overhead staff',
+      });
+
+      var overhead = new Equipment({ resource: 'overhead staff',
         type: "IV",
         allocated: 10
-      }];
+      })''
 
-      var cache = new Equipment(tools);
-      var app = new AppModel({library: library}); //params (object)
+      var cache = new Collection([searcher, horse, helicopter, k9, overhead], {model: Equipment);
+      
+      var equipmentView = new EquipView({collection: cache});
+
+      $('body').append(equipmentView.render());
   </body>
 </html>

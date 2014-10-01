@@ -1,7 +1,8 @@
 var EquipmentCache = Backbone.Collection.extend({
-	model: Equipment,
+	
+  model: Equipment,
 
 	initialize: function() {
-		
+
 	}
 });
